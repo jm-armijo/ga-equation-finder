@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift(File.expand_path('../lib', __dir__))
+
+require 'ga'
+
+POPULATION_SIZE = 10000
+GENERATIONS = 20000
+
+ga = GA.new(POPULATION_SIZE, GENERATIONS)
+best = ga.run
+puts "Best equation type with fitness #{best.fitness}: #{best}"
